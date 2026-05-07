@@ -1,0 +1,95 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* THE BAR: Deep Crust Background */
+window#waybar {
+    background: rgba(17, 17, 27, 0.85); /* Catppuccin Crust */
+    border: 1.5px solid #313244; /* Catppuccin Surface0 */
+    border-radius: 20px;
+    color: #cdd6f4; /* Catppuccin Text */
+}
+
+/* THE MODULES: Pastel Pills */
+#clock,
+#pulseaudio,
+#pulseaudio-microphone,
+#backlight,
+#network,
+#idle_inhibitor,
+#tray,
+#custom-luffy,
+#custom-system-monitor,
+#custom-battery {
+    background: #313244; /* Catppuccin Surface0 */
+    padding: 0px 15px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    margin-right: 6px;
+    border-radius: 12px;
+    border: 1px solid rgba(205, 214, 244, 0.1);
+}
+
+/* MONKEY ICON: The Captain's Seat */
+#custom-monkey {
+    background-image: url("/home/mano/.config/waybar/icon/monkey.png");
+    background-size: 100%; /* Kept small for you */
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    padding: 0px;
+    min-width: 30px; 
+    min-height: 30px;
+    margin: 3px 0px 3px 8px; /* Balanced margins */
+    
+    background-color: #f5e0dc; /* Catppuccin Rosewater */
+    border-radius: 50%;
+    border: 1px solid #f2cdcd; /* Catppuccin Flamingo */
+}
+
+/* WORKSPACES: Soft Navigation */
+#workspaces {
+    background: #181825; /* Catppuccin Mantle */
+    margin: 3px;
+    padding: 0px 5px;
+    border-radius: 15px;
+}
+
+#workspaces button {
+    padding: 0px 10px;
+    color: #6c7086; /* Catppuccin Overlay0 */
+    transition: all 0.3s ease;
+}
+
+#workspaces button.active {
+    color: #11111b; /* Dark text on light background */
+    background: #cba6f7; /* Catppuccin Mauve */
+    border-radius: 10px;
+    margin: 3px 2px;
+}
+
+/* HOVER EFFECT: Pastel Highlight */
+#workspaces button:hover,
+#clock:hover,
+#pulseaudio:hover,
+#network:hover,
+#custom-battery:hover {
+    background: #45475a; /* Catppuccin Surface1 */
+    color: #f5c2e7; /* Catppuccin Pink */
+}
+
+/* MODULE COLORS: Catppuccin Palette Accents */
+#network { color: #89b4fa; }           /* Blue */
+#pulseaudio { color: #fab387; }        /* Peach */
+#pulseaudio-microphone { color: #eba0ac; } /* Maroon */
+#backlight { color: #f9e2af; }         /* Yellow */
+#custom-battery { color: #a6e3a1; }    /* Green */
+#idle_inhibitor { color: #94e2d5; }    /* Teal */
+#clock { color: #cdd6f4; }             /* Text White */
+
+/* TRAY: Clean spacing */
+#tray {
+    padding: 0px 10px;
+}

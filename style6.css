@@ -1,0 +1,157 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", "Symbols Nerd Font", monospace;
+    font-size: 15px;
+    min-height: 0;
+}
+
+/* BAR: Deep Ocean / Grand Line Vibe */
+window#waybar {
+    background: rgba(10, 15, 30, 0.65); /* Deep sea blue tint */
+    border-bottom: 2px solid rgba(242, 201, 76, 0.3); /* Subtle gold horizon line */
+    padding: 4px 8px;
+}
+
+/* COMMON MODULES: Jolly  Roger Black & Straw Hat Gold */
+#clock,
+#pulseaudio,
+#pulseaudio-microphone,
+#backlight,
+#custom-battery,
+#network,
+#idle_inhibitor,
+#custom-system-monitor,
+#tray,
+#custom-luffy,
+#custom-monkey,
+#workspaces button {
+    color: #F4EBD0; /* Parchment white/beige */
+    background: rgba(25, 25, 25, 0.9); /* Pirate ship dark wood/black */
+    border: 1px solid rgba(242, 201, 76, 0.5); /* Straw Hat Gold */
+    border-radius: 14px;
+    padding: 2px 10px;
+    margin: 2px 3px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* CLOCK + TITLE */
+#clock {
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #F2C94C; /* Gold text for the time */
+}
+
+#custom-luffy {
+    font-size: 15px;
+    font-family: "Times New Roman", Times, serif;
+    color: #D82E3F; /* Luffy Red */
+    font-weight: bold;
+}
+
+/* MONKEY ICON */
+#custom-monkey {
+    background-image: url("/home/mano/.config/waybar/icon/monkey.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    min-width: 30px;
+    min-height: 30px;
+    padding: 0px;
+    margin: 2px 4px;
+
+    border-radius: 50%;
+    background-color: rgba(242, 201, 76, 0.1); /* Slight gold tint */
+    border: 2px solid #D82E3F; /* Red border */
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.8),
+        inset 0 1px 4px rgba(242, 201, 76, 0.3); /* Gold inner glow */
+}
+
+/* HOVER STATES: Gear Second Glow */
+#clock:hover,
+#pulseaudio:hover,
+#pulseaudio-microphone:hover,
+#backlight:hover,
+#custom-battery:hover,
+#network:hover,
+#idle_inhibitor:hover,
+#custom-system-monitor:hover,
+#tray:hover,
+#custom-luffy:hover,
+#custom-monkey:hover,
+#workspaces button:hover {
+    background: rgba(216, 46, 63, 0.85); /* Luffy Red background on hover */
+    color: #ffffff;
+    border: 1px solid #F2C94C; /* Bright gold border */
+    box-shadow:
+        0 0 12px rgba(242, 201, 76, 0.6), /* Gold outer glow */
+        0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+/* WORKSPACES */
+#workspaces {
+    margin: 0px 2px;
+}
+
+#workspaces button {
+    min-width: 12px;
+    min-height: 12px;
+    padding: 0px 8px;
+    margin: 2px 2px;
+    border-radius: 999px;
+    background: rgba(25, 25, 25, 0.9);
+    color: #a0a0a0;
+}
+
+/* ACTIVE WORKSPACE: Straw Hat / Pirate King Status */
+#workspaces button.active {
+    color: #252525; /* Dark text */
+    background: #F2C94C; /* Bright Straw Hat Gold */
+    border: 1px solid #D82E3F; /* Red border */
+    font-weight: bold;
+    box-shadow:
+        0 0 10px rgba(242, 201, 76, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+/* URGENT WORKSPACE: Conqueror's Haki */
+#workspaces button.urgent {
+    color: #ffffff;
+    background: #5E35B1; /* Deep Haki Purple */
+    border: 1px solid #000000;
+    box-shadow: 0 0 12px rgba(94, 53, 177, 0.8); /* Purple Haki glow */
+    animation: hakiGlow 1.5s infinite alternate;
+}
+
+/* ACTIVE MODULE STATES */
+#idle_inhibitor.activated {
+    color: #D82E3F; /* Red text when active */
+    border-color: #D82E3F;
+    box-shadow: 0 0 8px rgba(216, 46, 63, 0.4);
+}
+
+#network.disconnected {
+    color: #7f8c8d;
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    box-shadow: none;
+}
+
+/* TRAY SPACING */
+#tray > .passive,
+#tray > .active,
+#tray > .needs-attention {
+    padding: 0px 4px;
+    margin: 0px 2px;
+}
+
+/* ANIMATIONS (Optional for Haki effect) */
+@keyframes hakiGlow {
+    from {
+        box-shadow: 0 0 5px rgba(94, 53, 177, 0.5);
+    }
+    to {
+        box-shadow: 0 0 15px rgba(94, 53, 177, 0.9);
+    }
+}

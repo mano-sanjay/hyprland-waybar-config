@@ -1,0 +1,96 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", "Symbols Nerd Font", monospace;
+    font-size: 13px;
+    font-weight: 800; /* Extra bold for that synthwave look */
+    text-shadow: 0 0 5px rgba(255, 0, 255, 0.3); /* Subtle global glow */
+}
+
+/* THE BAR: Dark Obsidian with a Neon Edge */
+window#waybar {
+    background: rgba(13, 2, 33, 0.9); /* Deep Midnight Purple */
+    border-bottom: 2px solid #00f3ff; /* Cyan scanline */
+    border-radius: 0px 0px 15px 15px;
+    color: #ffffff;
+}
+
+/* EXTRA FEATURE: Gradient Backgrounds on Modules */
+#clock,
+#pulseaudio,
+#pulseaudio-microphone,
+#backlight,
+#network,
+#idle_inhibitor,
+#tray,
+#custom-luffy,
+#custom-system-monitor,
+#custom-battery {
+    background: linear-gradient(135deg, rgba(255, 0, 255, 0.15) 0%, rgba(0, 243, 255, 0.15) 100%);
+ 
+    color: #ffffff;
+    padding: 0px 15px;
+    margin: 5px 3px;
+    border-radius: 5px; /* Angled corners look more 'cyber' */
+    border: 1px solid rgba(0, 243, 255, 0.3);
+    /* Neon Glow Effect */
+    box-shadow: inset 0 0 10px rgba(255, 0, 255, 0.2);
+}
+
+/* MONKEY ICON: The Glitch Button */
+#custom-monkey {
+    background-image: url("/home/mano/.config/waybar/icon/monkey.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    min-width: 30px; 
+    min-height: 30px;
+    margin: 3px 10px;
+    
+    background-color: #ff007c; /* Neon Pink */
+    border-radius: 4px; /* Squared off for that retro-tech feel */
+    border: 2px solid #00f3ff;
+    box-shadow: 0 0 15px #ff007c;
+}
+
+/* WORKSPACES: Binary Arcade Mode */
+#workspaces {
+    background: rgba(255, 0, 124, 0.1);
+    margin: 6px;
+    padding: 0px 5px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 0, 124, 0.3);
+}
+
+#workspaces button {
+    color: #00f3ff;
+    padding: 0px 8px;
+}
+
+#workspaces button.active {
+    color: #ffffff;
+    background: #ff007c;
+    text-shadow: 0 0 8px #ffffff;
+    box-shadow: 0 0 12px #ff007c;
+    border-radius: 0px; /* Hard square for active */
+}
+
+/* HOVER EFFECT: System Overload (White-out glow) */
+#workspaces button:hover,
+#clock:hover,
+#pulseaudio:hover,
+#network:hover {
+    background: #ffffff;
+    color: #0d0221;
+    box-shadow: 0 0 20px #ffffff;
+}
+
+/* EXTRA FEATURE: Dynamic Status Colors */
+#network { color: #00f3ff; text-shadow: 0 0 8px #00f3ff; }
+#pulseaudio { color: #ff007c; text-shadow: 0 0 8px #ff007c; }
+#backlight { color: #fdfd96; text-shadow: 0 0 8px #fdfd96; }
+#custom-battery { color: #39ff14; text-shadow: 0 0 8px #39ff14; }
+
+/* TRAY: Extra spacing for icons */
+#tray {
+    padding: 0px 12px;
+}

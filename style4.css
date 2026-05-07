@@ -1,0 +1,121 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", "Symbols Nerd Font", monospace;
+    font-size: 16px;
+    padding: 0px 6px;
+    min-height: 0;
+}
+
+/* 🔥 FLOATING GLASS  BAR */
+window#waybar {
+    background: transparent;
+    padding: 2px 6px;
+}
+
+/* 🌌 COMMON MODULE STYLE */
+#clock,
+#pulseaudio,
+#pulseaudio-microphone,
+#backlight,
+#custom-battery,
+#network,
+#idle_inhibitor,
+#custom-system-monitor,
+#tray,
+#custom-luffy {
+    color: #dcdcdc;  /* soft metal text */
+    padding: 1px 10px;
+    margin: 2px;
+    border-radius: 20px;
+
+    /* dark metal background */
+    background: rgba(35, 35, 35, 0.85);
+
+    /* metal edge */
+    border: 1px solid rgba(26, 15, 15, 0.25);
+
+    transition: all 0.2s ease;
+}
+
+/* 🔤 TEXT */
+#clock {
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#custom-luffy {
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* 🐒 ICON */
+#custom-monkey {
+    background-image: url("/home/mano/.config/waybar/icon/monkey.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 32px;
+    padding: 0px;
+    border-radius: 50%;
+    /* metal ring */
+    border: 1px solid rgba(0, 0, 0, 0.663);
+    box-shadow:
+        0 2px 6px rgba(0, 0, 0, 0.997);
+}
+
+/* ⚡ HOVER (metal shine) */
+#clock:hover,
+#pulseaudio:hover,
+#network:hover,
+#custom-battery:hover,
+#backlight:hover,
+#idle_inhibitor:hover {
+
+    background: rgba(255,255,255,0.06);
+
+    box-shadow:
+        0 0 6px rgba(200,200,200,0.4);  /* soft silver glow */
+}
+
+/* 🔥 WORKSPACES */
+#workspaces button {
+    border-radius: 50px;
+    padding: 0px;
+    min-width: 12px;
+    min-height: 10px;
+    margin: 2px;
+    color: #ffffff;
+    background: rgba(35, 35, 35, 0.85);
+}
+/* ⚡ ACTIVE */
+#workspaces button.active {
+    color: #000000;
+    border: 2px solid rgba(48, 47, 47, 0.3);
+    background: transparent;
+
+    box-shadow:
+        0 0 6px rgba(220,220,220,0.5);
+}
+
+/* 💫 HOVER */
+#workspaces button:hover {
+    color: #030303;
+    background: rgb(255, 255, 255);
+    box-shadow:
+        0 0 5px rgba(245, 245, 245, 0.25);
+}
+
+/* 🟢 IDLE ACTIVE (keep minimal, no neon) */
+#idle_inhibitor.activated {
+    color: #ffffff;
+
+    box-shadow:
+        0 0 6px rgba(255,255,255,0.4);
+}
+
+/* 🌐 NETWORK DISCONNECTED */
+#network.disconnected {
+    color: #bbbbbb;
+
+    box-shadow:
+        0 0 5px rgba(200,200,200,0.3);
+}

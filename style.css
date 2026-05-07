@@ -1,0 +1,110 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+/* THE BAR: A floating translucent cloud */
+window#waybar {
+    /*background: rgba(0, 0, 0, 0.751);  Very low opacity */
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+    border-radius: 20px; /* Fully rounded bar */
+    color: #ffffff;
+    
+    /* Note: Blur is handled by your compositor (Hyprland), not CSS */
+}
+
+/* THE MODULES: Minimalist pills */
+#clock,
+#pulseaudio,
+#pulseaudio-microphone,
+#backlight,
+#network,
+#idle_inhibitor,
+#tray,
+#custom-luffy,
+#custom-system-monitor,
+#custom-battery {
+    background: rgba(9, 9, 9, 0.603);
+    color: #ffffff;
+    padding: 0px 15px;
+    font-size: 14px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 5px;
+    margin-bottom: 4px;
+    margin-right: 4px;
+    border-radius: 12px;
+    border: 2px solid rgba(0, 0, 0, 0.472);
+}
+#custom-luffy {
+    font-size: 19px;
+    font-family: 'Times New Roman', Times, serif;
+}
+/* CLOCK: Centerpiece focus */
+#clock {
+    font-size: 22px;
+    color: rgba(255, 255, 255, 0.9);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* MONKEY ICON: The Start Button */
+#custom-monkey {
+    background-image: url("/home/mano/.config/waybar/icon/monkey.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 0px;
+    min-width: 30px; 
+    min-height: 20px;
+    
+    margin: 2px;
+    background-color: rgba(57, 54, 54, 0.768);
+    border-radius: 50%; /* Circle */
+    border: 1px solid rgba(15, 14, 14, 0.155);
+}
+
+/* WORKSPACES: Soft bubbles */
+#workspaces {
+    background: rgba(50, 48, 48, 0.935);
+    margin: 3px;
+    padding: 0px 2px 0px 2px;
+    border-radius: 15px;
+}
+
+#workspaces button {
+    color: rgb(255, 255, 255);
+    transition: all 0.3s ease;
+}
+
+#workspaces button.active {
+    color: #ffffff;
+    padding: 0px 6px;
+    background: rgba(255, 255, 255, 0.449);
+    border-radius: 10px;
+    margin: 3px 2px;
+}
+
+/* HOVER EFFECT: Soft Glow */
+#workspaces button:hover,
+#clock:hover,
+#pulseaudio:hover,
+#network:hover,
+#custom-battery:hover {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+/* NETWORK & AUDIO: Colored accents for clarity */
+#network { color: #81ecec; } /* Minty Blue */
+#pulseaudio { color: #fab1a0; } /* Soft Peach */
+#backlight { color: #ffeaa7; } /* Pale Sun */
+#custom-battery { color: #55efc4; } /* Seafoam Green */
+
+/* TRAY: Clean spacing */
+#tray {
+    padding-left: 10px;
+}
