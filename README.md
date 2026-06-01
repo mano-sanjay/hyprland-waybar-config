@@ -18,7 +18,7 @@ Minimal. Colorful. Hacker-flavored. Pirate-approved. 🏴‍☠️
 
 <br/>
 
-![Preview](./preview.png)
+![Preview](preview.png)
 
 </div>
 
