@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./waybar/icon/logo.png" width="120" alt="Monkey D Luffy Logo"/>
+<img src="icon/logo.png" width="120" alt="HathnoDTech Logo"/>
 
 # ⚓ Monkey D. Luffy Waybar
 
