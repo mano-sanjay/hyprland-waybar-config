@@ -1,298 +1,207 @@
-# Monkey D Luffy Waybar Configuration
+<div align="center">
 
-A modern, minimal, and animated Waybar setup for Hyprland users who want a clean desktop with colorful styling, useful widgets, and a hacker-inspired look.
+<img src="./waybar/icon/monkey.png" width="120" alt="Monkey D Luffy Logo"/>
 
-This setup is designed for users who want:
+# ⚓ Monkey D. Luffy Waybar
 
-* Minimal and clean Waybar layout
-* Smooth colors and stylish modules
-* Hyprland workspace integration
-* Custom battery, system monitor, and Luffy-themed modules
-* Multiple CSS themes for customization
-* Fast performance with a lightweight design
+> *"I'm going to be King of the Pirates!"* — and King of the Desktop, apparently.
+
+**A blazing-fast, anime-inspired Waybar configuration for Hyprland.**  
+Minimal. Colorful. Hacker-flavored. Pirate-approved. 🏴‍☠️
+
+<br/>
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
+[![Hyprland](https://img.shields.io/badge/WM-Hyprland-blue?style=for-the-badge&logo=linux)](https://hyprland.org)
+[![Arch Linux](https://img.shields.io/badge/OS-Arch_Linux-1793D1?style=for-the-badge&logo=archlinux&logoColor=white)](https://archlinux.org)
+[![Waybar](https://img.shields.io/badge/Bar-Waybar-orange?style=for-the-badge)](https://github.com/Alexays/Waybar)
+
+<br/>
+
+![Preview](./preview1.png)
+
+</div>
 
 ---
 
-# Preview
+## ✨ Features at a Glance
 
+<div align="center">
 
-```bash
-preview1.png
+| 🎨 Theming | ⚡ Performance | 🔧 Modules |
+|:---:|:---:|:---:|
+| 10 CSS themes included | Lightweight & fast | 12+ custom modules |
+| Animated hover effects | Shell-script driven | Hyprland workspaces |
+| Rounded corners & blur | Minimal dependencies | Custom battery script |
 
+</div>
 
-```md
-![Preview 1](./preview1.png)
+---
+
+## 🗂️ Folder Structure
 
 ```
-
----
-
-# Features
-
-## Minimal Layout
-
-* Left section contains:
-
-  * Monkey launcher icon
-  * Hyprland workspaces
-  * Custom Luffy module
-
-* Center section contains:
-
-  * Clock with date and time
-
-* Right section contains:
-
-  * Tray icons
-  * Idle inhibitor
-  * Network information
-  * System monitor
-  * Brightness control
-  * Volume control
-  * Microphone control
-  * Battery information
-
----
-
-# Included Modules
-
-## Custom Monkey Launcher
-
-* Opens Rofi launcher when clicked
-* Styled with custom Monkey D Luffy icon
-* Minimal design with hover effects
-
-## Hyprland Workspaces
-
-* Shows active workspaces
-* Uses numbered workspace icons
-* Smooth active workspace highlighting
-
-## Clock Module
-
-* Displays time, day, date, and month
-* Alternative 24-hour format support
-* Clean and readable design
-
-## Audio Controls
-
-* Speaker volume module
-* Microphone volume module
-* Scroll to increase or decrease volume
-* Click to mute
-* Right click to open Pavucontrol
-
-## Brightness Module
-
-* Supports NVIDIA backlight device
-* Scroll to change brightness
-* Left click for low brightness mode
-* Right click for maximum brightness
-
-## Network Module
-
-* Shows WiFi name and signal strength
-* Shows Ethernet information
-* Detects disconnected state
-
-## Battery Module
-
-* Uses custom battery script
-* Supports custom icons and percentage display
-* Lightweight and fast refresh rate
-
-## System Monitor
-
-* Uses custom shell script
-* Displays CPU, RAM, and system information
-* Minimal text design for clean look
-
-## Idle Inhibitor
-
-* Quickly toggle idle mode on or off
-* Helpful for gaming, watching videos, or coding sessions
-
----
-
-# Folder Structure
-
-```bash
 waybar/
-├── config
-├── icon/
-│   └── monkey.png
-├── scripts/
-│   ├── battery.sh
-│   ├── luffy.sh
-│   └── system-monitor.sh
-├── style.css
-├── style1.css
-├── style2.css
-├── style3.css
-├── style4.css
-├── style5.css
-├── style6.css
-├── style7.css
-├── style9.css
-└── style10.css
+├── 📄 config                  # Main Waybar configuration
+├── 🖼️  icon/
+│   └── monkey.png             # Luffy launcher icon
+├── 📜 scripts/
+│   ├── battery.sh             # Custom battery indicator
+│   ├── luffy.sh               # Luffy-themed module script
+│   └── system-monitor.sh      # CPU / RAM display
+├── 🎨 style.css               # Active theme (default)
+├── style1.css  →  style7.css  # Theme variants
+└── style9.css  →  style10.css # More themes
 ```
 
 ---
 
-# Installation
+## 📦 Layout Overview
 
-## Clone the Repository
+### ◀ Left Section
+- 🐒 **Monkey Launcher** — Opens Rofi on click with custom icon
+- 🟣 **Hyprland Workspaces** — Numbered, animated, active highlighting
+- ⚓ **Luffy Module** — Custom themed indicator
+
+### ▶ Center Section
+- 🕐 **Clock** — Day · Date · Time with 24h support
+
+### ▶ Right Section
+- 🔊 **Audio** — Speaker & Mic with scroll-to-adjust
+- ☀️ **Brightness** — NVIDIA backlight, scroll or click
+- 📶 **Network** — WiFi SSID + signal / Ethernet info
+- 🔋 **Battery** — Custom icon script with percentage
+- 💻 **System Monitor** — CPU & RAM in minimal text
+- 💤 **Idle Inhibitor** — Toggle idle lock on/off
+- 🗂️ **Tray** — System tray icons
+
+---
+
+## 🚀 Installation
+
+### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/hyprland-waybar-config.git
-cd hyprland-waybar-config
+git clone https://github.com/your-username/luffy-waybar.git
+cd luffy-waybar
 ```
 
-## Copy Files
+### 2. Copy Files to Config
 
 ```bash
 cp -r waybar ~/.config/
 ```
 
----
-
-# Required Packages
-
-Install the following packages before using this Waybar setup:
+### 3. Install Required Packages
 
 ```bash
+# Core packages
 sudo pacman -S waybar rofi pavucontrol pamixer brightnessctl playerctl jq
-```
 
-If you use Hyprland:
-
-```bash
+# Hyprland (if not installed)
 sudo pacman -S hyprland
-```
 
-Optional packages:
-
-```bash
+# Optional: fonts
 sudo pacman -S noto-fonts noto-fonts-emoji ttf-font-awesome
 ```
 
----
-
-# Fonts Used
-
-For the icons to work correctly, install:
-
-* Font Awesome
-* Nerd Fonts
-* Noto Emoji Fonts
-
-Recommended font:
-
-* JetBrainsMono Nerd Font
-
----
-
-# How to Change Themes
-
-You included multiple CSS styles.
-
-To switch themes:
+### 4. Make Scripts Executable
 
 ```bash
-cp style3.css style.css
+chmod +x ~/.config/waybar/scripts/*.sh
 ```
 
-You can replace `style3.css` with any other style file.
-
-Example:
+### 5. Reload Waybar
 
 ```bash
-cp style7.css style.css
+killall waybar && waybar &
 ```
 
 ---
 
-# Customization
+## 🎨 Switching Themes
 
-You can customize:
+This config ships with **10 CSS themes**. Swap them in one command:
 
-* Colors
-* Borders
-* Transparency
-* Blur effects
-* Workspace styles
-* Hover animations
-* Module padding
-* Rounded corners
-* Icon styles
-* Font sizes
+```bash
+# Example: switch to theme 7
+cp ~/.config/waybar/style7.css ~/.config/waybar/style.css
+killall waybar && waybar &
+```
 
----
-
-# SEO Keywords
-
-waybar config, hyprland waybar, minimal waybar, animated waybar, arch linux waybar, hyprland rice, waybar themes, linux desktop customization, waybar css, hyprland status bar, rofi launcher, modern waybar config, minimal linux rice, anime waybar, luffy waybar, custom waybar modules, waybar battery script, waybar system monitor, arch linux desktop setup
-
----
-
-# Why This Waybar?
-
-This Waybar setup is focused on:
-
-* Clean minimal design
-* Smooth user experience
-* Lightweight performance
-* Custom scripts
-* Beautiful colors and animations
-* Easy customization
-* Multiple themes in one repo
-
-Perfect for:
-
-* Arch Linux users
-* Hyprland users
-* Ricing enthusiasts
-* Anime themed desktop setups
-* Minimal desktop lovers
+| File | Vibe |
+|------|------|
+| `style.css` | Default (active) |
+| `style1.css` | Variant 1 |
+| `style2.css` | Variant 2 |
+| `style3.css` | Variant 3 |
+| `style4.css` | Variant 4 |
+| `style5.css` | Variant 5 |
+| `style6.css` | Variant 6 |
+| `style7.css` | Variant 7 |
+| `style9.css` | Variant 9 |
+| `style10.css` | Variant 10 |
 
 ---
 
-# Future Updates
+## 🔤 Fonts
 
-Planned features:
+For icons and glyphs to render correctly, install:
 
-* More CSS themes
-* Better animations
-* Weather module
-* Music player module
-* CPU and RAM graphs
-* Power menu integration
-* Bluetooth module
-* Dynamic colors
+- **[JetBrainsMono Nerd Font](https://www.nerdfonts.com/)** *(recommended)*
+- **Font Awesome** — `ttf-font-awesome`
+- **Noto Emoji** — `noto-fonts-emoji`
 
 ---
 
-# Credits
+## 🛠️ Customization
 
-* Waybar
-* Hyprland
-* Rofi
-* Nerd Fonts
-* Font Awesome
+Every detail is editable through the CSS files:
 
----
-
-# Support
-
-If you like this config:
-
-* Star the repository
-* Fork the repository
-* Share screenshots
-* Open issues for bugs or suggestions
+```
+Colors · Borders · Transparency · Blur
+Workspace styles · Hover animations
+Module padding · Rounded corners
+Icon styles · Font sizes
+```
 
 ---
 
-# License
+## 🗺️ Roadmap
 
-This project is open source and available under the MIT License.
+- [ ] 🌦️ Weather module
+- [ ] 🎵 Music player (now playing)
+- [ ] 📊 CPU & RAM graphs
+- [ ] ⚡ Power menu integration
+- [ ] 🔵 Bluetooth module
+- [ ] 🌈 Dynamic color switching
+- [ ] 🎞️ Better entry animations
+
+---
+
+## 🙏 Credits
+
+Built with love using:
+
+- [Waybar](https://github.com/Alexays/Waybar)
+- [Hyprland](https://hyprland.org)
+- [Rofi](https://github.com/davatorium/rofi)
+- [Nerd Fonts](https://www.nerdfonts.com/)
+- [Font Awesome](https://fontawesome.com/)
+
+---
+
+## 📄 License
+
+Released under the **MIT License** — free to use, fork, and remix.  
+See [LICENSE](./LICENSE) for details.
+
+---
+
+<div align="center">
+
+**If this setup made your desktop look sick — drop a ⭐ and share your rice!**
+
+*Made with ❤️ and too much anime.*
+
+</div>
