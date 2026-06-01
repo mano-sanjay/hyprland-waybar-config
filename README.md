@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./waybar/icon/monkey.png" width="120" alt="Monkey D Luffy Logo"/>
+<img src="./waybar/icon/logo.png" width="120" alt="Monkey D Luffy Logo"/>
 
 # ⚓ Monkey D. Luffy Waybar
 
@@ -18,7 +18,7 @@ Minimal. Colorful. Hacker-flavored. Pirate-approved. 🏴‍☠️
 
 <br/>
 
-![Preview](./preview1.png)
+![Preview](./preview.png)
 
 </div>
 
